@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alumno/CLionProjects/untitled2/main.cpp
+iostream
+-
+../Arbol/ArbolBinario.h
+/home/alumno/CLionProjects/Arbol/ArbolBinario.h
+stdlib.h
+-
+string.h
+-
+fstream
+-
+

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/facu/CLionProjects/Proyecto_X/intento2/main.cpp
+iostream
+-
+fstream
+-
+stdlib.h
+-
+string
+-
+bits/stdc++.h
+-
+cctype
+-
+cstring
+-
+cstdio
+-
+algorithm
+-
+

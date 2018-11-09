@@ -13,6 +13,7 @@ using namespace std;
 
 
 class ArbolBinarioCod {
+
 protected:
     enum {IZQUIERDO, DERECHO};
     NodoArbol<string, string> *raiz;

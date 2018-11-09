@@ -14,6 +14,8 @@ using namespace std;
 
 void encode(string in, string dic, string out);
 void decode(string arc, string dic, string imp);
+void arbolencode(string out);
+void arboldecode(string out);
 //void splitAndPut(string cut, bool cod);
 void salida(string words, string out); //la cree solo para probar escribir el archivo de salida por separado
 
@@ -27,6 +29,12 @@ int main() {
     string rutaD;
     string rutaI;
     string str;
+
+
+
+    void arboldecode();
+
+
 
     while (!foo){
         cout<<"direccion del archivo de entrada /home/facu/CLionProjects/Proyecto_X/intento2/entrada.txt   --esto cambialo por la ubicacion del archivo en tu compu"<<endl;
@@ -50,6 +58,7 @@ int main() {
 
                 cout << "Ingrese ruta de archivo a imprimir:" << endl;
                 cin >> rutaI;
+
                 //verificar que la informacion sea correcta antes de llamar a la otra funcion?
                 encode(rutaA, rutaD, rutaI);
 
@@ -94,7 +103,9 @@ void encode(string in, string dic, string out) {
 //    string str;             //  ?
     string words;            //  la uso para copiar el contenido de los archivos de texto y guardarlos dentro de esta variable
 
+    // antes de comenzar con el programa en si deberiamos crear los arboles para luego tenerlos a mano
 
+//    void arbolencode(out); //funcion para crear el arbol de codificado
 
 //-----------------------------------------------//IMPORTANTE: LOS ARCHIVOS CREADOS/LEIDOS ESTAN EN LA CARPETA cmake-build-debug/intento2-----------------------------------------------------------------------
 
@@ -135,7 +146,9 @@ void decode(string in, string dic, string out) {
 //    string str;             //  ?
     string words;            //  la uso para copiar el contenido de los archivos de texto y guardarlos dentro de esta variable
 
+    // antes de comenzar con el programa en si deberiamos crear los arboles para luego tenerlos a mano
 
+//    void arboldecode(out); //funcion para crear el arbol de decodificado
 
 //-----------------------------------------------//IMPORTANTE: LOS ARCHIVOS CREADOS/LEIDOS ESTAN EN LA CARPETA cmake-build-debug/intento2-----------------------------------------------------------------------
 

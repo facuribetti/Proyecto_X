@@ -1,83 +1,59 @@
+//
+// Created by facu on 11/11/18.
+//
+
 #ifndef PROGRAMACION3_NODOARBOL_H
 #define PROGRAMACION3_NODOARBOL_H
 
-template<class T, class K>
-class NodoArbol {
-protected:
-    T cod;
-    K desc;
-    int fe;
-    NodoArbol *izq;
-    NodoArbol *der;
-    NodoArbol *padre;
-    template <T, K>friend class ArbolBinarioCod;
-    template <T, K>friend class ArbolBinarioDesc;
 
+template<class T>
+class NodoArbol {
+private:
+    NodoArbol<T> *izq;
+    NodoArbol<T> *der;
+    T dato;
 public:
     NodoArbol() {
         izq = nullptr;
         der = nullptr;
-        padre = nullptr;
-        fe = 0;
     }
 
-    NodoArbol(T c, K d) {
+    NodoArbol(T d) {
         izq = nullptr;
         der = nullptr;
-        padre = nullptr;
-        cod = c;
-        desc = d;
-        fe = 0;
+        dato = d;
     }
 
-    NodoArbol(T c, K d, NodoArbol *pad) {
-        izq = nullptr;
-        der = nullptr;
-        padre = pad;
-        cod = c;
-        desc = d;
-        fe = 0;
-    }
+    T getDato() const { return dato; }
 
-    T getCod() const {
-        return cod;
-    }
+    void setDato(T dato) { this->dato = dato; }
 
-    K getDesc() const {
-        return desc;
-    }
+    void setIzq(NodoArbol<T> *r) { this->izq = r; }
 
-    void setCod(T c) {
-        NodoArbol::cod = c;
-    }
+    void setDer(NodoArbol<T> *r) { this->der = r; }
 
-    void setDesc(T d) {
-        NodoArbol::desc = d;
-    }
+    NodoArbol *getIzq() const { return izq; }
 
-    NodoArbol *getIzq() const {
-        return izq;
-    }
+    NodoArbol *getDer() const { return der; }
 
-    void setIzq(NodoArbol *izq) {
-        NodoArbol::izq = izq;
-    }
+    // void actualizar(T dato) {}
 
-    NodoArbol *getDer() const {
-        return der;
-    }
-
-    void setDer(NodoArbol *der) {
-        NodoArbol::der = der;
-    }
-
-    NodoArbol *getPad() const {
-        return padre;
-    }
-
-    void setPad(NodoArbol *pad){
-        NodoArbol::padre = pad;
-    }
+//    void print(bool esDerecho, string identacion) {
+//        if (der != NULL) {
+//            der->print(true, identacion + (esDerecho ? "     " : "|    "));
+//        }
+//        cout << identacion;
+//        if (esDerecho) {
+//            cout << " /";
+//        } else {
+//            cout << " \\";
+//        }
+//        cout << "-- ";
+//        cout << dato << endl;
+//        if (izq != NULL) {
+//            izq->print(false, identacion + (esDerecho ? "|    " : "     "));
+//        }
+//    }
 };
 
 #endif //PROGRAMACION3_NODOARBOL_H

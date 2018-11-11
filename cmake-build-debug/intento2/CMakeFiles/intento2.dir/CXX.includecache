@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/facu/CLionProjects/Proyecto_X/intento2/ArbolBinarioCod.h
+/home/facu/CLionProjects/Proyecto_X/intento2/ArbolBinario.h
 NodoArbol.h
 /home/facu/CLionProjects/Proyecto_X/intento2/NodoArbol.h
 iostream
@@ -25,8 +25,8 @@ string
 -
 bits/stdc++.h
 -
-ArbolBinarioCod.h
-/home/facu/CLionProjects/Proyecto_X/intento2/ArbolBinarioCod.h
+ArbolBinario.h
+/home/facu/CLionProjects/Proyecto_X/intento2/ArbolBinario.h
 cctype
 -
 cstring

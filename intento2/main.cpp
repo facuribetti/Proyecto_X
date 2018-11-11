@@ -3,7 +3,8 @@
 #include <stdlib.h>      //para los archivos de texto
 #include <string>
 #include <bits/stdc++.h>
-#include "ArbolBinarioCod.h"
+#include "ArbolBinario.h"
+//#include "ArbolBinarioCod.h"
 //#include "ArbolBinarioDesc.h"
 #include <cctype>
 #include <cstring>
@@ -19,6 +20,7 @@ void decode(string arc, string dic, string imp);
 //void arboldecode(string out);
 
 void creararbol(string diccionario,int option);
+ArbolBinario <string> dic; //arbol binario del dicionario
 
 void splitAndPut(string cut, bool cod);
 void salida(string words, string out); //la cree solo para probar escribir el archivo de salida por separado
@@ -30,8 +32,6 @@ void salida(string words, string out); //la cree solo para probar escribir el ar
 template<class T, class K>
 ArbolBinarioCod<T, K> aCod;
 */
-
-
 
 //template<class T, class K>
 //ArbolBinarioDesc<T, K> aDesc;
@@ -73,13 +73,19 @@ int main() {
             case 1:
 
                 cout << "Ingrese ruta de archivo a codificar:" << endl;
-                cin >> rutaA;
+                cout << "/home/facu/CLionProjects/Proyecto_X/intento2/entrada.txt"<<endl;
+                rutaA = "/home/facu/CLionProjects/Proyecto_X/intento2/entrada.txt"; //lo hago de forma automatica para ahorrar tiempo al codificar
+                //cin >> rutaA;
 
                 cout << "Ingrese ruta del diccionario:" << endl;
-                cin >> rutaD;
+                cout << "/home/facu/CLionProjects/Proyecto_X/intento2/diccionario.txt"<<endl;
+                rutaD = "/home/facu/CLionProjects/Proyecto_X/intento2/diccionario.txt"; //lo hago de forma automatica para ahorrar tiempo al codificar
+                //cin >> rutaD;
 
                 cout << "Ingrese ruta de archivo a imprimir:" << endl;
-                cin >> rutaI;
+                cout << "/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/intento2/salida.txt"<<endl;
+                rutaI = "/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/intento2/salida.txt";        //lo hago de forma automatica para ahorrar tiempo al codificar
+                //cin >> rutaI;
 
                 creararbol(rutaD,option);   //en esta funcion creo el arbol del diccionario
 
@@ -135,6 +141,19 @@ void creararbol(string diccionario,int option){
 
         //el getline me devuelve cada par de palabras, por ej: "archivo	pepe" o "pepe	casa"
         //tengo que ver como corto eso por la mitad y darlo vuelta para la decodificacion (uso el TAB /T)
+
+
+        //deberia meter words directamente al arbol??
+        //si meto el par de palabras como vienen seria el arbol de codificar, para crear el de decodificar deberia dar vuelta ambas palabras y estaria
+
+        dic.put(words);
+
+        //aca abajo muestro el arbol
+        cout << endl << "Inorden: ";
+
+        dic.inorder();
+
+        cout << endl;
 
         cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
         //funcion para buscar la palabra en el arbol y que me devuelva la palabra codificada

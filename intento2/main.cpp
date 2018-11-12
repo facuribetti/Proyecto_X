@@ -22,7 +22,7 @@ void decode(string arc, string dic, string imp);
 void creararbol(string diccionario,int option);
 ArbolBinario <string> dic; //arbol binario del dicionario
 
-void splitAndPut(string cut, bool cod);
+void splitAndPut(string cut);
 void salida(string words, string out); //la cree solo para probar escribir el archivo de salida por separado
 
 
@@ -122,6 +122,17 @@ int main() {
     return 0;
 }
 
+
+//funcion utilizada para cortar el string por los espacios
+
+void splitAndPut(string cut) {
+    // Used to split string around spaces.
+    istringstream ss(cut);
+
+
+}
+
+
 //funcion para crear el arbol del diccionario
 //el dato option me dice si debo crear el arbol de codificar o el de decodificar
 void creararbol(string diccionario,int option){
@@ -146,22 +157,30 @@ void creararbol(string diccionario,int option){
         //deberia meter words directamente al arbol??
         //si meto el par de palabras como vienen seria el arbol de codificar, para crear el de decodificar deberia dar vuelta ambas palabras y estaria
 
-        dic.put(words);
+        //tengo que cortar el string en strings de un solo par de palabras para guardarlos en el arbol
 
-        //aca abajo muestro el arbol
-        cout << endl << "Inorden: ";
+        //string[] word = words.split('/t');
+        splitAndPut(words);
 
-        dic.inorder();
 
-        cout << endl;
+        //aca deberia mandar las palabras cortadas al arbol
+        dic.put(words); //aca estoy creando un arbol de un solo elemento
 
-        cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
+
+        //cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
         //funcion para buscar la palabra en el arbol y que me devuelva la palabra codificada
         //al agregar el texto en un archivo ya existente cada vez que entre al programa deberia de borrar lo que exista en el
 
 
     }
     dictionary.close();//cerramos el archivo
+
+    //aca abajo muestro el arbol
+    cout << endl << "muestro el arbol por consola (preorder): "<<endl;
+
+    dic.preorder();
+
+    cout << endl;
 
 }
 
@@ -203,17 +222,16 @@ void encode(string in, string dic, string out,int option) {
 
     while(!entry.eof()) { //mientras no sea final del archivo
         getline(entry,words);
-        cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
+        //cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
         //funcion para buscar la palabra en el arbol y que me devuelva la palabra codificada
         //al agregar el texto en un archivo ya existente cada vez que entre al programa deberia de borrar lo que exista en el
 
-
-
-        //------------------------------------------------------------------------------------------------------------//escribir en el archivo de salida
-        salida(words,out);  //esta funcion es la que me escribe el archivo salida.txt
-        //salida (palabra,direccion del archivo)
-
     }
+
+    //------------------------------------------------------------------------------------------------------------//escribir en el archivo de salida
+    salida(words,out);  //esta funcion es la que me escribe el archivo salida.txt
+    //salida (palabra,direccion del archivo)
+
     entry.close();//cerramos el archivo
 
 }

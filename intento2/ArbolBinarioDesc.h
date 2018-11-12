@@ -477,7 +477,7 @@ void ArbolBinarioDesc<string, string>::auxAltura(NodoArbol<string, string> *nodo
     if(EsHoja(nodo) && a > altura) altura = a;
 }
 
-/**
+/*
  * Muestra un árbol por consola
  */
 // template<class T>

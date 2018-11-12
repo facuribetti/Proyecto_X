@@ -1,4 +1,1 @@
-archivo	pepe
-pepe	casa
-casa	juan
-juan	archivo
+archivo pepe    casa    juan    facundo hola    vaca

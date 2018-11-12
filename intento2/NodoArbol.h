@@ -52,4 +52,90 @@ public:
 //    }
 };
 
+/*
+template<class T, class K>
+class NodoArbol {
+private:
+    T cod;
+    K desc;
+    int fe;
+    NodoArbol<T, K> *izq;
+    NodoArbol<T, K> *der;
+    NodoArbol<T, K> *padre;
+    template <T, K>friend class ArbolBinarioCod;
+//    template <T, K>friend class ArbolBinarioDesc;
+
+
+public:
+    NodoArbol() {
+        izq = nullptr;
+        der = nullptr;
+        padre = nullptr;
+        fe = 0;
+    }
+
+    NodoArbol(T c, K d) {
+        izq = nullptr;
+        der = nullptr;
+        padre = nullptr;
+        //cod = c;
+        //desc = d;
+        fe = 0;
+    }
+
+    NodoArbol(T cod, K desc, NodoArbol *pad) {
+        izq = nullptr;
+        der = nullptr;
+        padre = pad;
+//        cod = c;
+//        desc = d;
+        fe = 0;
+    }
+
+    T getCod() const {
+        return cod;
+    }
+
+    K getDesc() const {
+        return desc;
+    }
+
+    void setCod(T cod) {
+        this->cod = cod;
+        //NodoArbol::cod = c;
+    }
+
+    void setDesc(T desc) {
+        this->desc = desc;
+        //NodoArbol::desc = d;
+    }
+
+    NodoArbol *getIzq() const {
+        return izq;
+    }
+
+    void setIzq(NodoArbol *izq) {
+        this->izq = izq;
+        //NodoArbol::izq = izq;
+    }
+
+    NodoArbol *getDer() const {
+        return der;
+    }
+
+    void setDer(NodoArbol *der) {
+        this->der = der;
+        //NodoArbol::der = der;
+    }
+
+    NodoArbol *getPad() const {
+        return padre;
+    }
+
+    void setPad(NodoArbol *pad){
+        this->padre = pad;
+        //NodoArbol::padre = pad;
+    }
+};
+ */
 #endif //PROGRAMACION3_NODOARBOL_H

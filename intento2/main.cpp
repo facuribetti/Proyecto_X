@@ -21,8 +21,9 @@ void decode(string arc, string dic, string imp);
 
 void creararbol(string diccionario,int option);
 ArbolBinario <string> dic; //arbol binario del dicionario
+void split(string cut);
 
-void splitAndPut(string cut);
+//void splitAndPut(string cut);
 void salida(string words, string out); //la cree solo para probar escribir el archivo de salida por separado
 
 
@@ -124,14 +125,29 @@ int main() {
 
 
 //funcion utilizada para cortar el string por los espacios
-
+/*
 void splitAndPut(string cut) {
     // Used to split string around spaces.
     istringstream ss(cut);
-
-
 }
+*/
 
+void split(string cut){
+
+    stringstream ss(cut);
+    string item;
+    char delim = '  ';
+    while(getline(ss,item,delim)){
+        dic.put(item);
+        cout<<"split "<<item<<endl;
+    }
+    //mando las palabras al arbol
+
+//    cout<< "ingrese una palabra para buscarla en el arbol"<<endl;
+//    string buscar;
+//    cin>>buscar;
+//    dic.search("buscar");
+}
 
 //funcion para crear el arbol del diccionario
 //el dato option me dice si debo crear el arbol de codificar o el de decodificar
@@ -150,6 +166,7 @@ void creararbol(string diccionario,int option){
     while(!dictionary.eof()) { //mientras no sea final del archivo
         getline(dictionary,words);
 
+        //cout<<"este es el getline del diccionario"<<endl;
         //el getline me devuelve cada par de palabras, por ej: "archivo	pepe" o "pepe	casa"
         //tengo que ver como corto eso por la mitad y darlo vuelta para la decodificacion (uso el TAB /T)
 
@@ -160,11 +177,13 @@ void creararbol(string diccionario,int option){
         //tengo que cortar el string en strings de un solo par de palabras para guardarlos en el arbol
 
         //string[] word = words.split('/t');
-        splitAndPut(words);
+//        splitAndPut(words);
 
+
+        split(words);
 
         //aca deberia mandar las palabras cortadas al arbol
-        dic.put(words); //aca estoy creando un arbol de un solo elemento
+//         dic.put(words); //aca estoy creando un arbol de un solo elemento
 
 
         //cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
@@ -178,7 +197,7 @@ void creararbol(string diccionario,int option){
     //aca abajo muestro el arbol
     cout << endl << "muestro el arbol por consola (preorder): "<<endl;
 
-    dic.preorder();
+    dic.inorder();
 
     cout << endl;
 
@@ -222,10 +241,11 @@ void encode(string in, string dic, string out,int option) {
 
     while(!entry.eof()) { //mientras no sea final del archivo
         getline(entry,words);
-        //cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
+
+        cout << "while de encode" << endl;
+        cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
         //funcion para buscar la palabra en el arbol y que me devuelva la palabra codificada
         //al agregar el texto en un archivo ya existente cada vez que entre al programa deberia de borrar lo que exista en el
-
     }
 
     //------------------------------------------------------------------------------------------------------------//escribir en el archivo de salida

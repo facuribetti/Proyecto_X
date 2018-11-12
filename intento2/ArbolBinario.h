@@ -1,7 +1,3 @@
-//
-// Created by facu on 11/11/18.
-//
-
 #ifndef PROGRAMACION3_ARBOLBINARIO_H
 #define PROGRAMACION3_ARBOLBINARIO_H
 

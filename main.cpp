@@ -13,6 +13,7 @@
 using namespace std;
 
 ArbolBinario <Par> dic;
+
 void salida(string words, string out);
 
 void salida(string words, string out) {

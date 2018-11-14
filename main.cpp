@@ -144,90 +144,35 @@ int main(int argc, char *args[]) {
         while (!entry.eof()) { //mientras no sea final del archivo
             while (getline(entry, words)) {
                 if (words != "") {
-                    Par buscar;
-                    stringstream ss(words);
-                    string item;
-                    char delim = ' ';
-                    while (getline(ss, item, delim)) {
-                        //dic.put(item);
-                        cout << "split " << item << endl;
+                    if{
+                        Par buscar;
+                        stringstream ss(words);
+                        string item;
+                        char delim = ' ';
+                        while (getline(ss, item, delim)) {
+                            //dic.put(item);
+                            cout << "split " << item << endl;
 
-                        //unsigned long count = words.find(' ');
+                            //unsigned long count = words.find(' ');
 
-                        buscar.set("",item);
+                            buscar.set("",item);
 
-                        //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
+                            //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
 
-                        string encontre;
+                            string encontre;
 
-                        //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
-                        encontre = dic.search(buscar).getOriginal();
-                        cout << endl;
-                        cout << encontre << endl;
-                        salida(encontre, args[7]);
+                            //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
+                            encontre = dic.search(buscar).getOriginal();
+                            cout << endl;
+                            cout << encontre << endl;
+                            salida(encontre, args[7]);
+                    }
+
                     }
                 }
-                //in.set(words.substr(0, count), words.substr(count+1, words.length()));
-                //dic.put(in);
-                //cout << in << endl;
-
 
             }
         }
-        /*
-        ifstream entry;
-        entry.open(args[5]);    //en deco es salida.txt
-        //entry.open(args[5], ios::in);//abrimos el archivo en modo lectura
-
-        if (entry.fail()) {
-            cout << "No se pudo abrir el archivo de entrada";
-            exit(1);
-        }
-
-        while (!entry.eof()) { //mientras no sea final del archivo
-            while (getline(entry, words)) {
-                if (words != "") {
-                    unsigned long count = words.find(' ');
-                    Par buscar;
-                    //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
-                    buscar.set(words.substr(count + 1, words.length()),words.substr(0, count));
-                    string encontre;
-
-                    //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
-                    encontre = dic.search(buscar).getOriginal();
-                    cout << endl;
-                    cout << encontre << endl;
-                    salida(encontre, args[7]);//en deco es deco.txt
-                }
-                //in.set(words.substr(0, count), words.substr(count+1, words.length()));
-                //dic.put(in);
-                //cout << in << endl;
-
-
-            }
-        }
-        */
-        /*                                                                                        //codifico el mensaje
-        while (!entry.eof()) { //mientras no sea final del archivo
-            getline(entry, words);  //leo el archivo de entrada
-            string encontre;
-            Par buscar(words, "");
-            encontre = dic.search(buscar).getTraduccion();
-            cout<<endl;
-            cout<<encontre<<endl;
-
-            //cout << words << endl;  //aca deberiamos buscar en el arbol cada palabra que vayamos sacando para escribirla en el archivo de salida a continuacion
-            //funcion para buscar la palabra en el arbol y que me devuelva la palabra codificada
-            //al agregar el texto en un archivo ya existente cada vez que entre al programa deberia de borrar lo que exista en el
-        }
-
-        //------------------------------------------------------------------------------------------------------------//escribir en el archivo de salida
-        //salida(words, out);  //esta funcion es la que me escribe el archivo salida.txt
-        //salida (palabra,direccion del archivo)
-
-        entry.close();//cerramos el archivo
-    */
-
 
 // 1
 // Cargar diccionario

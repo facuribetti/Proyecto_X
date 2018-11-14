@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/44/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/49/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/44/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/49/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/facu/CLionProjects/Proyecto_X/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/44/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/49/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/44/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/49/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,45 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled2
-
-# Build rule for target.
-untitled2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled2
-.PHONY : untitled2
-
-# fast build rule for target.
-untitled2/fast:
-	$(MAKE) -f untitled2/CMakeFiles/untitled2.dir/build.make untitled2/CMakeFiles/untitled2.dir/build
-.PHONY : untitled2/fast
-
-#=============================================================================
-# Target rules for targets named untitled3
-
-# Build rule for target.
-untitled3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled3
-.PHONY : untitled3
-
-# fast build rule for target.
-untitled3/fast:
-	$(MAKE) -f untitled3/CMakeFiles/untitled3.dir/build.make untitled3/CMakeFiles/untitled3.dir/build
-.PHONY : untitled3/fast
-
-#=============================================================================
-# Target rules for targets named codingProyect
-
-# Build rule for target.
-codingProyect: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 codingProyect
-.PHONY : codingProyect
-
-# fast build rule for target.
-codingProyect/fast:
-	$(MAKE) -f IntentoDePrograma/CMakeFiles/codingProyect.dir/build.make IntentoDePrograma/CMakeFiles/codingProyect.dir/build
-.PHONY : codingProyect/fast
-
-#=============================================================================
 # Target rules for targets named intento2
 
 # Build rule for target.
@@ -159,8 +120,35 @@ intento2: cmake_check_build_system
 
 # fast build rule for target.
 intento2/fast:
-	$(MAKE) -f intento2/CMakeFiles/intento2.dir/build.make intento2/CMakeFiles/intento2.dir/build
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/build
 .PHONY : intento2/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -170,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... untitled2"
-	@echo "... untitled3"
-	@echo "... codingProyect"
 	@echo "... intento2"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

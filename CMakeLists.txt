@@ -1,9 +1,6 @@
-cmake_minimum_required(VERSION 2.8)
-project(Programacion3)
+cmake_minimum_required(VERSION 3.10)
+project(Proyecto_X)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(untitled2)
-add_subdirectory(untitled3)
-add_subdirectory(IntentoDePrograma)
-add_subdirectory(intento2)
+add_executable(intento2 main.cpp par.h)

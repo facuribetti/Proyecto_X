@@ -50,10 +50,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/44/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/49/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/44/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/49/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -65,222 +65,39 @@ CMAKE_SOURCE_DIR = /home/facu/CLionProjects/Proyecto_X
 CMAKE_BINARY_DIR = /home/facu/CLionProjects/Proyecto_X/cmake-build-debug
 
 #=============================================================================
-# Directory level rules for directory untitled2
-
-# Convenience name for "all" pass in the directory.
-untitled2/all: untitled2/CMakeFiles/untitled2.dir/all
-
-.PHONY : untitled2/all
-
-# Convenience name for "clean" pass in the directory.
-untitled2/clean: untitled2/CMakeFiles/untitled2.dir/clean
-
-.PHONY : untitled2/clean
-
-# Convenience name for "preinstall" pass in the directory.
-untitled2/preinstall:
-
-.PHONY : untitled2/preinstall
-
-#=============================================================================
-# Target rules for target untitled2/CMakeFiles/untitled2.dir
+# Target rules for target CMakeFiles/intento2.dir
 
 # All Build rule for target.
-untitled2/CMakeFiles/untitled2.dir/all:
-	$(MAKE) -f untitled2/CMakeFiles/untitled2.dir/build.make untitled2/CMakeFiles/untitled2.dir/depend
-	$(MAKE) -f untitled2/CMakeFiles/untitled2.dir/build.make untitled2/CMakeFiles/untitled2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target untitled2"
-.PHONY : untitled2/CMakeFiles/untitled2.dir/all
+CMakeFiles/intento2.dir/all:
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/depend
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target intento2"
+.PHONY : CMakeFiles/intento2.dir/all
 
 # Include target in all.
-all: untitled2/CMakeFiles/untitled2.dir/all
+all: CMakeFiles/intento2.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-untitled2/CMakeFiles/untitled2.dir/rule: cmake_check_build_system
+CMakeFiles/intento2.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 untitled2/CMakeFiles/untitled2.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/intento2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 0
-.PHONY : untitled2/CMakeFiles/untitled2.dir/rule
+.PHONY : CMakeFiles/intento2.dir/rule
 
 # Convenience name for target.
-untitled2: untitled2/CMakeFiles/untitled2.dir/rule
-
-.PHONY : untitled2
-
-# clean rule for target.
-untitled2/CMakeFiles/untitled2.dir/clean:
-	$(MAKE) -f untitled2/CMakeFiles/untitled2.dir/build.make untitled2/CMakeFiles/untitled2.dir/clean
-.PHONY : untitled2/CMakeFiles/untitled2.dir/clean
-
-# clean rule for target.
-clean: untitled2/CMakeFiles/untitled2.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory untitled3
-
-# Convenience name for "all" pass in the directory.
-untitled3/all: untitled3/CMakeFiles/untitled3.dir/all
-
-.PHONY : untitled3/all
-
-# Convenience name for "clean" pass in the directory.
-untitled3/clean: untitled3/CMakeFiles/untitled3.dir/clean
-
-.PHONY : untitled3/clean
-
-# Convenience name for "preinstall" pass in the directory.
-untitled3/preinstall:
-
-.PHONY : untitled3/preinstall
-
-#=============================================================================
-# Target rules for target untitled3/CMakeFiles/untitled3.dir
-
-# All Build rule for target.
-untitled3/CMakeFiles/untitled3.dir/all:
-	$(MAKE) -f untitled3/CMakeFiles/untitled3.dir/build.make untitled3/CMakeFiles/untitled3.dir/depend
-	$(MAKE) -f untitled3/CMakeFiles/untitled3.dir/build.make untitled3/CMakeFiles/untitled3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target untitled3"
-.PHONY : untitled3/CMakeFiles/untitled3.dir/all
-
-# Include target in all.
-all: untitled3/CMakeFiles/untitled3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-untitled3/CMakeFiles/untitled3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 untitled3/CMakeFiles/untitled3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 0
-.PHONY : untitled3/CMakeFiles/untitled3.dir/rule
-
-# Convenience name for target.
-untitled3: untitled3/CMakeFiles/untitled3.dir/rule
-
-.PHONY : untitled3
-
-# clean rule for target.
-untitled3/CMakeFiles/untitled3.dir/clean:
-	$(MAKE) -f untitled3/CMakeFiles/untitled3.dir/build.make untitled3/CMakeFiles/untitled3.dir/clean
-.PHONY : untitled3/CMakeFiles/untitled3.dir/clean
-
-# clean rule for target.
-clean: untitled3/CMakeFiles/untitled3.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory IntentoDePrograma
-
-# Convenience name for "all" pass in the directory.
-IntentoDePrograma/all: IntentoDePrograma/CMakeFiles/codingProyect.dir/all
-
-.PHONY : IntentoDePrograma/all
-
-# Convenience name for "clean" pass in the directory.
-IntentoDePrograma/clean: IntentoDePrograma/CMakeFiles/codingProyect.dir/clean
-
-.PHONY : IntentoDePrograma/clean
-
-# Convenience name for "preinstall" pass in the directory.
-IntentoDePrograma/preinstall:
-
-.PHONY : IntentoDePrograma/preinstall
-
-#=============================================================================
-# Target rules for target IntentoDePrograma/CMakeFiles/codingProyect.dir
-
-# All Build rule for target.
-IntentoDePrograma/CMakeFiles/codingProyect.dir/all:
-	$(MAKE) -f IntentoDePrograma/CMakeFiles/codingProyect.dir/build.make IntentoDePrograma/CMakeFiles/codingProyect.dir/depend
-	$(MAKE) -f IntentoDePrograma/CMakeFiles/codingProyect.dir/build.make IntentoDePrograma/CMakeFiles/codingProyect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target codingProyect"
-.PHONY : IntentoDePrograma/CMakeFiles/codingProyect.dir/all
-
-# Include target in all.
-all: IntentoDePrograma/CMakeFiles/codingProyect.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-IntentoDePrograma/CMakeFiles/codingProyect.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 IntentoDePrograma/CMakeFiles/codingProyect.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 0
-.PHONY : IntentoDePrograma/CMakeFiles/codingProyect.dir/rule
-
-# Convenience name for target.
-codingProyect: IntentoDePrograma/CMakeFiles/codingProyect.dir/rule
-
-.PHONY : codingProyect
-
-# clean rule for target.
-IntentoDePrograma/CMakeFiles/codingProyect.dir/clean:
-	$(MAKE) -f IntentoDePrograma/CMakeFiles/codingProyect.dir/build.make IntentoDePrograma/CMakeFiles/codingProyect.dir/clean
-.PHONY : IntentoDePrograma/CMakeFiles/codingProyect.dir/clean
-
-# clean rule for target.
-clean: IntentoDePrograma/CMakeFiles/codingProyect.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory intento2
-
-# Convenience name for "all" pass in the directory.
-intento2/all: intento2/CMakeFiles/intento2.dir/all
-
-.PHONY : intento2/all
-
-# Convenience name for "clean" pass in the directory.
-intento2/clean: intento2/CMakeFiles/intento2.dir/clean
-
-.PHONY : intento2/clean
-
-# Convenience name for "preinstall" pass in the directory.
-intento2/preinstall:
-
-.PHONY : intento2/preinstall
-
-#=============================================================================
-# Target rules for target intento2/CMakeFiles/intento2.dir
-
-# All Build rule for target.
-intento2/CMakeFiles/intento2.dir/all:
-	$(MAKE) -f intento2/CMakeFiles/intento2.dir/build.make intento2/CMakeFiles/intento2.dir/depend
-	$(MAKE) -f intento2/CMakeFiles/intento2.dir/build.make intento2/CMakeFiles/intento2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target intento2"
-.PHONY : intento2/CMakeFiles/intento2.dir/all
-
-# Include target in all.
-all: intento2/CMakeFiles/intento2.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-intento2/CMakeFiles/intento2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 intento2/CMakeFiles/intento2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/facu/CLionProjects/Proyecto_X/cmake-build-debug/CMakeFiles 0
-.PHONY : intento2/CMakeFiles/intento2.dir/rule
-
-# Convenience name for target.
-intento2: intento2/CMakeFiles/intento2.dir/rule
+intento2: CMakeFiles/intento2.dir/rule
 
 .PHONY : intento2
 
 # clean rule for target.
-intento2/CMakeFiles/intento2.dir/clean:
-	$(MAKE) -f intento2/CMakeFiles/intento2.dir/build.make intento2/CMakeFiles/intento2.dir/clean
-.PHONY : intento2/CMakeFiles/intento2.dir/clean
+CMakeFiles/intento2.dir/clean:
+	$(MAKE) -f CMakeFiles/intento2.dir/build.make CMakeFiles/intento2.dir/clean
+.PHONY : CMakeFiles/intento2.dir/clean
 
 # clean rule for target.
-clean: intento2/CMakeFiles/intento2.dir/clean
+clean: CMakeFiles/intento2.dir/clean
 
 .PHONY : clean
 

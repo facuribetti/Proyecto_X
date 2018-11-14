@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/facu/CLionProjects/Proyecto_X/ArbolBinario.h
+NodoArbol.h
+/home/facu/CLionProjects/Proyecto_X/NodoArbol.h
+iostream
+-
+
+/home/facu/CLionProjects/Proyecto_X/NodoArbol.h
+
+/home/facu/CLionProjects/Proyecto_X/main.cpp
+iostream
+-
+fstream
+-
+stdlib.h
+-
+string
+-
+bits/stdc++.h
+-
+ArbolBinario.h
+/home/facu/CLionProjects/Proyecto_X/ArbolBinario.h
+par.h
+/home/facu/CLionProjects/Proyecto_X/par.h
+cctype
+-
+cstring
+-
+cstdio
+-
+algorithm
+-
+
+/home/facu/CLionProjects/Proyecto_X/par.h
+string
+-
+ostream
+-
+

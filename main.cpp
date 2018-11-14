@@ -55,23 +55,43 @@ int main(int argc, char *args[]) {
 
     // args[3]   archivo de diccionario
     // args[5]   archivo de entrada
-    // args[7]   archivo de salida.
+
 
     //creo el arbol binario
-    ifstream dictionary;
-    dictionary.open(args[3]);
-    if (dictionary.fail()) {
-        cout << "No se pudo abrir el archivo de entrada";
-        exit(1);
-    }
-    while (!dictionary.eof()) { //mientras no sea final del archivo
-        while (getline(dictionary, words)) {
-            unsigned long count = words.find('\t');
-            in.set(words.substr(0, count), words.substr(count + 1, words.length()));
-            dic.put(in);
-            //cout << "split " << in << endl;
+    if (args[1][1] == 'c'){
+
+        ifstream dictionary;
+        dictionary.open(args[3]);
+        if (dictionary.fail()) {
+            cout << "No se pudo abrir el archivo de entrada";
+            exit(1);
+        }
+        while (!dictionary.eof()) { //mientras no sea final del archivo
+            while (getline(dictionary, words)) {
+                unsigned long count = words.find('\t');
+                in.set(words.substr(0, count), words.substr(count + 1, words.length()));
+                dic.put(in);
+                //cout << "split " << in << endl;
+            }
+        }
+    }else if(args[1][1] == 'd'){
+        ifstream dictionary;
+        dictionary.open(args[3]);
+        if (dictionary.fail()) {
+            cout << "No se pudo abrir el archivo de entrada";
+            exit(1);
+        }
+        while (!dictionary.eof()) { //mientras no sea final del archivo
+            while (getline(dictionary, words)) {
+                unsigned long count = words.find('\t');
+                //in.set(words.substr(0, count), words.substr(count + 1, words.length()));
+                in.set(words.substr(count + 1, words.length()),words.substr(0, count) );
+                dic.put(in);
+                //cout << "split " << in << endl;
+            }
         }
     }
+
 
 //    string h = "multiprogramo";
 //    Par buscar(h,"");
@@ -141,10 +161,13 @@ int main(int argc, char *args[]) {
             exit(1);
         }
 
+        //debo crear el arbol de nuevo pero con las palabras de la clase par dadas vuelta
+
         while (!entry.eof()) { //mientras no sea final del archivo
+
             while (getline(entry, words)) {
                 if (words != "") {
-                    if{
+                    //if(words != ","){
                         Par buscar;
                         stringstream ss(words);
                         string item;
@@ -155,18 +178,20 @@ int main(int argc, char *args[]) {
 
                             //unsigned long count = words.find(' ');
 
-                            buscar.set("",item);
+                            buscar.set(item,"");
 
                             //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
 
                             string encontre;
+                            encontre.clear();
 
                             //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
-                            encontre = dic.search(buscar).getOriginal();
+                            encontre = dic.search(buscar).getTraduccion();
                             cout << endl;
                             cout << encontre << endl;
                             salida(encontre, args[7]);
-                    }
+                        //}
+
 
                     }
                 }

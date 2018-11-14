@@ -354,8 +354,7 @@ void salida(string words, string out) {
     }
 
     salida << " ";    //pongo el espacio para separar las palabras o futuras frases a ingresar
-    salida
-            << words; // le mando la palabra que me envia la llamada a la funcion      /DEBERIA sustituirla por la palabra ya codificada
+    salida << words; // le mando la palabra que me envia la llamada a la funcion      /DEBERIA sustituirla por la palabra ya codificada
     salida.close();//cerramos el archivo
 
 

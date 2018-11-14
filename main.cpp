@@ -18,8 +18,6 @@ ArbolBinario <Par> dic;
 void salida(string words, string out);
 
 void salida(string words, string out) {
-
-    cout << "entre a la funcion salida" << endl;
     ofstream salida;
     salida.open(out, ios::app); //abrimos el archivo en modo añadir texto
 
@@ -101,18 +99,30 @@ int main(int argc, char *args[]) {
 
         while (!entry.eof()) { //mientras no sea final del archivo
             while (getline(entry, words)) {
-                if (words != " ") {
-                    unsigned long count = words.find(' ');
+                if (words != "") {
                     Par buscar;
-                    buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
-                    string encontre;
+                    stringstream ss(words);
+                    string item;
+                    char delim = ' ';
+                    while (getline(ss, item, delim)) {
+                        //dic.put(item);
+                        cout << "split " << item << endl;
 
-                    //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
-                    encontre = dic.search(buscar).getTraduccion();
-                    cout << endl;
-                    cout << encontre << endl;
-                    salida(encontre, args[7]);
-                }
+                        //unsigned long count = words.find(' ');
+
+                        buscar.set(item,"");
+
+                        //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
+
+                        string encontre;
+
+                        //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
+                        encontre = dic.search(buscar).getTraduccion();
+                        cout << endl;
+                        cout << encontre << endl;
+                        salida(encontre, args[7]);
+                    }
+                    }
                 //in.set(words.substr(0, count), words.substr(count+1, words.length()));
                 //dic.put(in);
                 //cout << in << endl;
@@ -122,7 +132,49 @@ int main(int argc, char *args[]) {
         }
 
     } else if (args[1][1] == 'd') {
+        ifstream entry;
+        entry.open(args[5]);
+        //entry.open(args[5], ios::in);//abrimos el archivo en modo lectura
 
+        if (entry.fail()) {
+            cout << "No se pudo abrir el archivo de entrada";
+            exit(1);
+        }
+
+        while (!entry.eof()) { //mientras no sea final del archivo
+            while (getline(entry, words)) {
+                if (words != "") {
+                    Par buscar;
+                    stringstream ss(words);
+                    string item;
+                    char delim = ' ';
+                    while (getline(ss, item, delim)) {
+                        //dic.put(item);
+                        cout << "split " << item << endl;
+
+                        //unsigned long count = words.find(' ');
+
+                        buscar.set("",item);
+
+                        //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
+
+                        string encontre;
+
+                        //buscar.set(words, "");  //me busca la frase completa, necesito cortarla por palabras
+                        encontre = dic.search(buscar).getOriginal();
+                        cout << endl;
+                        cout << encontre << endl;
+                        salida(encontre, args[7]);
+                    }
+                }
+                //in.set(words.substr(0, count), words.substr(count+1, words.length()));
+                //dic.put(in);
+                //cout << in << endl;
+
+
+            }
+        }
+        /*
         ifstream entry;
         entry.open(args[5]);    //en deco es salida.txt
         //entry.open(args[5], ios::in);//abrimos el archivo en modo lectura
@@ -134,7 +186,7 @@ int main(int argc, char *args[]) {
 
         while (!entry.eof()) { //mientras no sea final del archivo
             while (getline(entry, words)) {
-                if (words != " ") {
+                if (words != "") {
                     unsigned long count = words.find(' ');
                     Par buscar;
                     //buscar.set(words.substr(0, count), words.substr(count + 1, words.length()));
@@ -154,13 +206,7 @@ int main(int argc, char *args[]) {
 
             }
         }
-
-
-        //leo el archivo de entrada
-
-
-
-
+        */
         /*                                                                                        //codifico el mensaje
         while (!entry.eof()) { //mientras no sea final del archivo
             getline(entry, words);  //leo el archivo de entrada

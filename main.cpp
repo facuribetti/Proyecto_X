@@ -14,13 +14,22 @@
 
 using namespace std;
 
+ArbolBinario <Par> dic;
 
 int main(int argc, char *args[]) {
+
+    //par
+    //string
+    //ifstream
+    Par in;
+    string words;
+
+
+
 
     for (int i = 0; i < argc; i++) {
         cout << i << args[i] << endl;
     }
-
 
     if (args[1][1] == 'c') {
         cout << "codifico";
@@ -29,7 +38,33 @@ int main(int argc, char *args[]) {
     else
         cout << "error";
 
-    cout << endl << args[3];
+    cout << endl << args[3]<<endl;
+
+    //creo el arbol binario
+    ifstream dictionary;
+    dictionary.open(args[3]);
+    if (dictionary.fail()) {
+        cout << "No se pudo abrir el archivo de entrada";
+        exit(1);
+    }
+
+    while (!dictionary.eof()) { //mientras no sea final del archivo
+//        getline(dictionary, words); //copio to-do el contenido del diccionario en el string words
+//        stringstream ss(words);
+//        string item;
+//        char delim = '\t';
+//        while (getline(ss, item, delim)) {
+            while(getline(dictionary,words)){
+            unsigned long count = words.find('\t');
+            in.set(words.substr(0, count), words.substr(count+1, words.length()));
+            dic.put(in);
+            cout << "split " << in << endl;
+        }
+    }
+
+    Par buscar("bancales","");
+    string encontre = dic.search(buscar).getTraduccion();
+    cout << endl << encontre << endl;
 
 //    Par pp("hola", "chau");
 //    dic.put(pp);

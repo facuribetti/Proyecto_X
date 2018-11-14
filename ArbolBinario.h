@@ -108,7 +108,7 @@ void ArbolBinario<T>::put(T dato, NodoArbol<T> *r) {
     T miDato = r->getDato();
 
     if(miDato == dato)
-        throw 200;
+        throw 200;      //este error me tira que el dato esta repetido
 
     if(dato > miDato) {
         if(r->getDer() != nullptr) {

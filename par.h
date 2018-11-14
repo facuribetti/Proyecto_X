@@ -20,6 +20,8 @@ public:
         traduccion = "";
     }
 
+    void set(string _original, string _traduccion){ original = _original; traduccion = _traduccion;};
+
     Par(const string &original, const string &traduccion) : original(original), traduccion(traduccion) {}
 
     bool operator==(const Par &rhs) const {
